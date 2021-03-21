@@ -1,0 +1,1425 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/20/2021 2:37:47 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-92Q0KE9H"
+  DTS:CreatorName="LAPTOP-92Q0KE9H\gabri"
+  DTS:DTSID="{68B6E016-23EA-4C05-AA22-CBB99BBA0CA9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.152"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{68B879C8-08C9-4A3F-92DC-DE6C02C6FFB9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B58BD9E5-2E6B-499B-A318-46B5D20E0C4C}"
+      DTS:ObjectName="Gerenciador de Conexões de Arquivos Simples">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::CaminhoArquivoProcessar]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Arquivos Funcionarismo\Processar\">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REGISTRO"
+              DTS:DTSID="{F5F826C2-FFB6-4806-ACCE-5724920CC28D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VINCULO"
+              DTS:DTSID="{4BE6F6E8-18EF-4451-9A7C-39642E9B5C14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NOME"
+              DTS:DTSID="{D359655F-7D0A-41A6-A505-EC51C2878355}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CARGO_BASICO"
+              DTS:DTSID="{E2E86209-424C-4A17-802B-7E56B431DBBA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REF_CARGO_BAS"
+              DTS:DTSID="{6247189E-2C98-478B-9174-0A3A496130F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEGMENTO"
+              DTS:DTSID="{AB5A1AE4-8E98-4C3E-8E75-95B4920F18F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GRUPO"
+              DTS:DTSID="{A208205D-3A8C-4242-9CBA-FC9D77E1CF3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBGRUPO"
+              DTS:DTSID="{981E5580-F492-4003-8365-A3E4585C6012}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ESCOL_CARGO_BASICO"
+              DTS:DTSID="{6B0CE098-A323-4193-8FEC-1C010BA658D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CARGO_COMISSAO"
+              DTS:DTSID="{B43DCDCA-A47E-4B43-ABE9-82CB1B11C806}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REF_CARGO_COM"
+              DTS:DTSID="{8723AD3C-2CB4-4AF5-8E72-3647165FD411}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ESCOL_CARGO_COMISSAO"
+              DTS:DTSID="{726D7096-28B3-4777-8247-D6AF48DF8BEA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_INICIO_EXERC"
+              DTS:DTSID="{268402B1-6CFC-4604-AE18-0773D7B82038}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REL_JUR_ADM"
+              DTS:DTSID="{15D4F9E6-F91E-45A5-ADDF-AB4F051F6013}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SECRET_PREFREG"
+              DTS:DTSID="{19CF25C2-5F73-4E8D-926E-5287EF48B988}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SETOR"
+              DTS:DTSID="{8ECB6700-22EC-4835-8CE9-457B9EC5417C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEXO"
+              DTS:DTSID="{B9534167-8C7D-4D0E-A2F2-4B83013C9D05}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ANO_NASCIMENTO"
+              DTS:DTSID="{EDBDCE53-5D22-4660-9899-E840316DA3C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RACA"
+              DTS:DTSID="{46F98361-E82B-4E5E-ACCB-66F51B8D1DD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEFICIENTE"
+              DTS:DTSID="{B191DE3B-D3A9-4AD4-B51B-1B00D1B1CCCA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BC48A7C2-87B8-4ABB-B09E-E030656BE4F4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CaminhoArquivoProcessado">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Arquivos Funcionarismo\Processado\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E53A60FF-D327-406A-8034-48E788299A2A}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::CaminhoArquivoProcessar]+ @[User::NomeArquivo]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CaminhoArquivoProcessar">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Arquivos Funcionarismo\Processar\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B38D4F5D-24E3-444F-B89E-6EB17C82D4F4}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::NomeArquivo]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="NomeArquivo">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Percorre arquivos a processar"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Contêiner do Loop Foreach"
+      DTS:DTSID="{C424F2D4-A534-4229-9C4D-FF4A5C2FC041}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Percorre arquivos a processar">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{9055B373-2DBE-408F-BD58-AC0063B98F45}"
+        DTS:ObjectName="{9055B373-2DBE-408F-BD58-AC0063B98F45}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Arquivos Funcionarismo\Processar" />
+            <FEFEProperty
+              FileSpec="*.csv*" />
+            <FEFEProperty
+              FileNameRetrievalType="1" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Tarefa Fluxo de Dados"
+          DTS:DTSID="{3AB24B5F-AFCD-4804-AC8D-01A698024825}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Tarefa Fluxo de Dados"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+                  description="Origem de Arquivo Simples"
+                  localeId="1046"
+                  name="Arquivo Processar"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Especifica se colunas de comprimento zero são tratadas como nulas."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica o nome de uma coluna de saída que contém o nome do arquivo. Se nenhum nome for especificado, nenhuma coluna de saída contendo o nome de arquivo será gerada."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+                      connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples]"
+                      name="Saída de Origem de Arquivo Simples">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REGISTRO]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[REGISTRO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REGISTRO]"
+                          name="REGISTRO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[VINCULO]"
+                          dataType="i1"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[VINCULO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[VINCULO]"
+                          name="VINCULO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME]"
+                          name="NOME"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[CARGO_BASICO]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[CARGO_BASICO]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[CARGO_BASICO]"
+                          name="CARGO_BASICO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REF_CARGO_BAS]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[REF_CARGO_BAS]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REF_CARGO_BAS]"
+                          name="REF_CARGO_BAS"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SEGMENTO]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SEGMENTO]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SEGMENTO]"
+                          name="SEGMENTO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[GRUPO]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[GRUPO]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[GRUPO]"
+                          name="GRUPO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SUBGRUPO]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SUBGRUPO]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SUBGRUPO]"
+                          name="SUBGRUPO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[ESCOL_CARGO_BASICO]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ESCOL_CARGO_BASICO]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[ESCOL_CARGO_BASICO]"
+                          name="ESCOL_CARGO_BASICO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[CARGO_COMISSAO]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[CARGO_COMISSAO]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[CARGO_COMISSAO]"
+                          name="CARGO_COMISSAO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REF_CARGO_COM]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[REF_CARGO_COM]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REF_CARGO_COM]"
+                          name="REF_CARGO_COM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[ESCOL_CARGO_COMISSAO]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ESCOL_CARGO_COMISSAO]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[ESCOL_CARGO_COMISSAO]"
+                          name="ESCOL_CARGO_COMISSAO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[DATA_INICIO_EXERC]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[DATA_INICIO_EXERC]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[DATA_INICIO_EXERC]"
+                          name="DATA_INICIO_EXERC"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REL_JUR_ADM]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[REL_JUR_ADM]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REL_JUR_ADM]"
+                          name="REL_JUR_ADM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SECRET_PREFREG]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SECRET_PREFREG]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SECRET_PREFREG]"
+                          name="SECRET_PREFREG"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SETOR]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SETOR]"
+                          length="150"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SETOR]"
+                          name="SETOR"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SEXO]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SEXO]"
+                          length="1"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SEXO]"
+                          name="SEXO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[ANO_NASCIMENTO]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ANO_NASCIMENTO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[ANO_NASCIMENTO]"
+                          name="ANO_NASCIMENTO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[RACA]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[RACA]"
+                          length="13"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[RACA]"
+                          name="RACA"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[DEFICIENTE]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[DEFICIENTE]"
+                          length="3"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[DEFICIENTE]"
+                          name="DEFICIENTE"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se os dados estão em formato binário."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[REGISTRO]"
+                          dataType="i4"
+                          name="REGISTRO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[VINCULO]"
+                          dataType="i1"
+                          name="VINCULO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="NOME" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[CARGO_BASICO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="CARGO_BASICO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[REF_CARGO_BAS]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="REF_CARGO_BAS" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SEGMENTO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SEGMENTO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[GRUPO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="GRUPO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SUBGRUPO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SUBGRUPO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ESCOL_CARGO_BASICO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="ESCOL_CARGO_BASICO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[CARGO_COMISSAO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="CARGO_COMISSAO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[REF_CARGO_COM]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="REF_CARGO_COM" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ESCOL_CARGO_COMISSAO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="ESCOL_CARGO_COMISSAO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[DATA_INICIO_EXERC]"
+                          dataType="date"
+                          name="DATA_INICIO_EXERC" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[REL_JUR_ADM]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="REL_JUR_ADM" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SECRET_PREFREG]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SECRET_PREFREG" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SETOR]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SETOR" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SEXO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="SEXO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ANO_NASCIMENTO]"
+                          dataType="i2"
+                          name="ANO_NASCIMENTO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[RACA]"
+                          codePage="1252"
+                          dataType="str"
+                          length="13"
+                          name="RACA" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[DEFICIENTE]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="DEFICIENTE" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                      isErrorOut="true"
+                      name="Saída de Erro de Origem de Arquivo Simples">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Coluna de Saída de Erro de Origem de Arquivo Simples"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                          name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+                  description="Destino OLE DB"
+                  name="Destino OLE DB"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                      name="OpenRowset">[stg].[FuncionariosAtivos]</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="O comando SQL a ser executado."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica o modo usado para acessar o banco de dados."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Connections[OleDbConnection]"
+                      connectionManagerID="{5E469256-9869-432C-9FD8-E5C120CDD3E2}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[localhost.FuncionarismoSP-DW]"
+                      description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                      errorOrTruncationOperation="Inserir"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Entrada de Destino OLE DB">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[REGISTRO]"
+                          cachedDataType="i4"
+                          cachedName="REGISTRO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[REGISTRO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REGISTRO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[VINCULO]"
+                          cachedDataType="i1"
+                          cachedName="VINCULO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[VINCULO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[VINCULO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[CARGO_BASICO]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="CARGO_BASICO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[CARGO_BASICO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[CARGO_BASICO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[REF_CARGO_BAS]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="REF_CARGO_BAS"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[REF_CARGO_BAS]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REF_CARGO_BAS]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[SEGMENTO]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="SEGMENTO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[SEGMENTO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SEGMENTO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[GRUPO]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="GRUPO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[GRUPO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[GRUPO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[SUBGRUPO]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="SUBGRUPO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[SUBGRUPO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SUBGRUPO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[ESCOL_CARGO_BASICO]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="ESCOL_CARGO_BASICO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ESCOL_CARGO_BASICO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[ESCOL_CARGO_BASICO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[CARGO_COMISSAO]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="CARGO_COMISSAO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[CARGO_COMISSAO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[CARGO_COMISSAO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[REF_CARGO_COM]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="REF_CARGO_COM"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[REF_CARGO_COM]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REF_CARGO_COM]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[ESCOL_CARGO_COMISSAO]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="ESCOL_CARGO_COMISSAO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ESCOL_CARGO_COMISSAO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[ESCOL_CARGO_COMISSAO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[DATA_INICIO_EXERC]"
+                          cachedDataType="date"
+                          cachedName="DATA_INICIO_EXERC"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[DATA_INICIO_EXERC]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[DATA_INICIO_EXERC]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[REL_JUR_ADM]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="REL_JUR_ADM"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[REL_JUR_ADM]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[REL_JUR_ADM]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[SECRET_PREFREG]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="SECRET_PREFREG"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[SECRET_PREFREG]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SECRET_PREFREG]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[SETOR]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="SETOR"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[SETOR]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SETOR]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[SEXO]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="SEXO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[SEXO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[SEXO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[ANO_NASCIMENTO]"
+                          cachedDataType="i2"
+                          cachedName="ANO_NASCIMENTO"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ANO_NASCIMENTO]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[ANO_NASCIMENTO]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[RACA]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="13"
+                          cachedName="RACA"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[RACA]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[RACA]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[DEFICIENTE]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="3"
+                          cachedName="DEFICIENTE"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[DEFICIENTE]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[DEFICIENTE]" />
+                        <inputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[NOME]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="NOME"
+                          externalMetadataColumnId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME]"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[REGISTRO]"
+                          dataType="i4"
+                          name="REGISTRO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[VINCULO]"
+                          dataType="i4"
+                          name="VINCULO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[CARGO_BASICO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="CARGO_BASICO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[REF_CARGO_BAS]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="REF_CARGO_BAS" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[SEGMENTO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SEGMENTO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[GRUPO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="GRUPO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[SUBGRUPO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SUBGRUPO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ESCOL_CARGO_BASICO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="ESCOL_CARGO_BASICO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[CARGO_COMISSAO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="CARGO_COMISSAO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[REF_CARGO_COM]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="REF_CARGO_COM" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ESCOL_CARGO_COMISSAO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="ESCOL_CARGO_COMISSAO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[DATA_INICIO_EXERC]"
+                          dataType="dbDate"
+                          name="DATA_INICIO_EXERC" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[REL_JUR_ADM]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="REL_JUR_ADM" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[SECRET_PREFREG]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SECRET_PREFREG" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[SETOR]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SETOR" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[SEXO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="SEXO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ANO_NASCIMENTO]"
+                          dataType="i4"
+                          name="ANO_NASCIMENTO" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[RACA]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="RACA" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[DEFICIENTE]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="DEFICIENTE" />
+                        <externalMetadataColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="NOME" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Saída de Erro de Destino OLE DB"
+                      synchronousInputId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados.Paths[Saída de Origem de Arquivo Simples]"
+                  endId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                  name="Saída de Origem de Arquivo Simples"
+                  startId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Outputs[Saída de Origem de Arquivo Simples]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Percorre arquivos a processar\Tarefa Sistema de Arquivos"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Tarefa Sistema de Arquivos"
+          DTS:DTSID="{C224D923-AC4A-451C-A5FB-CA5612151994}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Tarefa Sistema de Arquivos"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="User::CaminhoArquivoProcessar"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::CaminhoArquivoProcessado"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Percorre arquivos a processar.PrecedenceConstraints[Restrição]"
+          DTS:CreationName=""
+          DTS:DTSID="{63F00A9D-1132-4884-8E92-E9787C699119}"
+          DTS:From="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Restrição"
+          DTS:To="Package\Percorre arquivos a processar\Tarefa Sistema de Arquivos" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{9265E538-6976-443F-99E0-B9DD6D55E19B}"
+          DTS:ObjectName="{9265E538-6976-443F-99E0-B9DD6D55E19B}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::NomeArquivo" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados"
+          TopLeft="43,38" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Percorre arquivos a processar\Tarefa Sistema de Arquivos"
+          TopLeft="35,149" />
+        <EdgeLayout
+          Id="Package\Percorre arquivos a processar.PrecedenceConstraints[Restrição]"
+          TopLeft="140.25,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69"
+              Start="0,0"
+              End="0,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="278,242"
+          Size="278,285"
+          Id="Package\Percorre arquivos a processar"
+          TopLeft="325,128" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar"
+          TopLeft="430,111" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB"
+          TopLeft="438,243" />
+        <EdgeLayout
+          Id="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="516,153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,90"
+              Start="0,0"
+              End="0,82.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,82.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
