@@ -26,12 +26,12 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-92Q0KE9H</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmeTq2jCBm0O0WFBWksCodwAAAAACAAAAAAAQZgAAAAEAACAAAAAnviZzaU32+IWjKKngsgyKN6jhNHE+uS0qbsGBk+tLIQAAAAAOgAAAAAIAACAAAADoOI9j+p74RZqjRRvWt5Z98U8A1gH8u3ZwRF9MQMrKf5AAAAASNLuYYlnHAEbYuqnlMM8Zk2S6eyAaUGo9k0F6ZwI++ly9n+zCMcfGCqTTQUD08nEtd7vWndjRC+QcMiDtcU3IDp5K4EQCCxLHO2BqRz38p42v+KrGRXfanOmZFMl76uVZTyrB0fBajhC2QAeRgdeLrTD/9fE/LTXAn7GBpHBKkd0s8PQZroVkPmiIqKEgnw9AAAAAf02YdGkmZWS1ZmgLA5T23HWPwrjCXIznkqF2kgyfoDbK663HYPh2gxjL6XG7YV7mFVjbK1cSEc3DCgLjfLBIBw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAznl8uTXOiUCAyZ0TmtGyyAAAAAACAAAAAAAQZgAAAAEAACAAAAB+tcLw0/2wCxOTTJlFADsGkDHR6/AxJGSOFuuozXt1DgAAAAAOgAAAAAIAACAAAADougpL950PMJc8UlpYdsbiQp3lB3SqsSaDctIlYHSYnJAAAADyBATekymqrtXXFF7tSIQcP/N/OOTKZiMfehBYXFaOXaA22BQQHpgrhW/BQP1ppL/o1qwExc15c8HOZlvnWjDmgH4718Is7vvqPA/ttUHdRWtGPhQEmJX5pOgVoYHckKnachTd/POjY+lcV+Fay9U0m6ojAoou6KDsId00M8k+jkBrCM8KaNzL/j5LLDwHobpAAAAA6m+piXTRctFyEyRDgsn/nK6o54z/l/YUNqMilfxzRIztftOWkCl0VbR8muQ9370mjZ5sKaPAqh6Id8eMlcIPVQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="Cargas STG - ArquivosFuncionarios.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Carga DW.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Carga Data Warehouse.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="localhost.FuncionarismoSP-DW.conmgr" />
@@ -164,17 +164,17 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">5</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A2107CB5-114C-462C-883F-1A2C27BF26F0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6467296B-84EE-46BD-9B6E-BB3B26FA3B79}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.AlwaysCheckForRowDelimiters">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.AlwaysCheckForRowDelimiters">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -189,7 +189,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.CodePage">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.CodePage">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -204,7 +204,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.ColumnNamesInFirstDataRow">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.ColumnNamesInFirstDataRow">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -219,7 +219,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.ConnectByProxy">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.ConnectByProxy">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -234,7 +234,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.DataRowsToSkip">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.DataRowsToSkip">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -249,7 +249,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.Format">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.Format">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -264,7 +264,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.HeaderRowDelimiter">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.HeaderRowDelimiter">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -280,7 +280,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.HeaderRowsToSkip">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.HeaderRowsToSkip">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -295,7 +295,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.LocaleID">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.LocaleID">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -310,7 +310,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.RowDelimiter">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.RowDelimiter">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -326,7 +326,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.TextQualifier">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.TextQualifier">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -341,7 +341,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Gerenciador de Conexões de Arquivos Simples.Unicode">
+                <SSIS:Parameter SSIS:Name="CM.Arquivo Contratações.Unicode">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -358,16 +358,16 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Carga DW.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Carga Data Warehouse.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{954EAE32-2BE4-4CC9-8F1A-B3736DAD4AAF}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B229B6EB-970F-44F8-82AA-A7CB48DEFBEF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{44910C18-8E5A-45EB-A35B-541B97EC9493}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

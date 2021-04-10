@@ -11,16 +11,16 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{68B879C8-08C9-4A3F-92DC-DE6C02C6FFB9}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{6467296B-84EE-46BD-9B6E-BB3B26FA3B79}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+      DTS:refId="Package.ConnectionManagers[Arquivo Contratações]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{B58BD9E5-2E6B-499B-A318-46B5D20E0C4C}"
-      DTS:ObjectName="Gerenciador de Conexões de Arquivos Simples">
+      DTS:ObjectName="Arquivo Contratações">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::CaminhoArquivoProcessar]</DTS:PropertyExpression>
       <DTS:ObjectData>
@@ -313,8 +313,8 @@
                   <connections>
                     <connection
                       refId="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
-                      connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+                      connectionManagerID="Package.ConnectionManagers[Arquivo Contratações]"
+                      connectionManagerRefId="Package.ConnectionManagers[Arquivo Contratações]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
@@ -1331,27 +1331,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="191,42"
+          Size="191.2,41.6"
           Id="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados"
-          TopLeft="43,38" />
+          TopLeft="41.3333333995606,38" />
         <NodeLayout
-          Size="214,42"
+          Size="214.4,41.6"
           Id="Package\Percorre arquivos a processar\Tarefa Sistema de Arquivos"
-          TopLeft="35,149" />
+          TopLeft="34.1666666997804,149.866666673554" />
         <EdgeLayout
           Id="Package\Percorre arquivos a processar.PrecedenceConstraints[Restrição]"
-          TopLeft="140.25,80">
+          TopLeft="139.15000004967,79.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,69"
+              EndConnector="0,70.2666666735543"
               Start="0,0"
-              End="0,61.5">
+              End="0,62.7666666735543">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,61.5" />
+                    End="0,62.7666666735543" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1363,8 +1363,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="278,242"
-          Size="278,285"
+          PanelSize="280.8,241.6"
+          Size="280.8,284.8"
           Id="Package\Percorre arquivos a processar"
           TopLeft="325,128" />
       </GraphLayout>
@@ -1376,11 +1376,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="169,42"
+          Size="168.8,41.6"
           Id="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Arquivo Processar"
           TopLeft="430,111" />
         <NodeLayout
-          Size="159,42"
+          Size="159.2,41.6"
           Id="Package\Percorre arquivos a processar\Tarefa Fluxo de Dados\Destino OLE DB"
           TopLeft="438,243" />
         <EdgeLayout
